@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            :root {
+                --btn_pink: #ff40dc;
+                --main_bg_color: #3841bb;
+                --game_bg_color: #4952cc;
+                --link-color: #FF3FAC;
+            }
+            .wrapper {
+                background-color: black;
+                width: auto;
+            }
+            .main_container {
+                background-color: var(--main_bg_color);
+                height:100%;
+                padding-top: 20px;
+            }
+            .game_container {
+                background-color: #4952cc;
+                width: 960px;
+                height: 540px;
+                justify-content: center;
+                align-items: center;
+            }
+            .run-game-btn {
+                background-color: var(--btn_pink);
+                border: none;
+                color: white;
+                padding: 12px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                transition-duration: 0.3s;
+                border-radius: 4px;
+                border: 2px solid var(--btn_pink);
+                vertical-align: middle;
+                margin: -20px -50px; 
+                position:relative;
+                top:50%; 
+                left:50%;
+            }
+            .run-game-btn svg {
+                display: inline-block;
+                vertical-align: middle;
+                fill: var(--btn_pink);
+                width: 20px;
+                height: 20px;
+                margin-right: 0.25rem;
+                margin-bottom: 0.25rem;
+                color: white;
+                stroke-width: 2;
+            }
+            .run-game-btn:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px var(--main_bg_color);
+            }
+            .test-shit {
+                display: inline-block;
+            }
+            .font {
+                color: white;
+                line-height: 1.4;
+                font-weight: bold;
+                font-family: sans-serif;
+                font-size: 16px;
+                padding-left: 5px;
+            }
+            a, a:link, a:visited { 
+                color: var(--link-color);
+            }
+        </style>
+    </head>
+    <script>
+        //data-iframe="&lt;iframe mozallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad&quot; frameborder=&quot;0&quot; src=&quot;//v6p9d9t4.ssl.hwcdn.net/html/2876359-359162/index.html&quot; msallowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; id=&quot;game_drop&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;"
+        function gameDisplay() {
+            document.getElementById("gameDiv").innerHTML = '<iframe mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="http://73.4.188.149/bin/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
+        }
+    </script>
+    <body style="background-color: black; margin: 0;">
+        <!-- <ul id="funny_tools" class=>
+            <a href="Trolled/trolled.html">pp lol</a>
+        </ul> -->
+        <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
+            <div class="game_container">
+                <div id="gameDiv" style="height: 100%; width: 100%;">
+                    <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="gameDisplay()">
+                        <svg style="stroke: white;" version="1.1" viewBox="0 0 24 24"  stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        Run Game
+                    </button>
+                </div>    
+            </div>
+            <div style="margin-left: 10px;">
+                <p class="font">
+                    <strong>Friday Night Funkin' Kade Engine Port</strong>
+                </p>
+                <p class="font">
+                    <em>
+                        <strong>
+                        REMAKE OF THE ITCH.IO FNF WEBPAGE
+                        <a href="https://ninja-muffin24.itch.io/funkin" rel="nofollow noopener">https://ninja-muffin24.itch.io/funkin</a>
+                        </strong>
+                    </em>
+                    <p class="font">
+                        me when
+                    </p>
+                    <p class="font">
+                        Your mom moment
+                    </p>
+                    <p class="font">
+                        <strong>
+                            I added the Zardy Mod because funny moment hard song real 
+                        </strong>
+                    </p>
+                    <p class="font">
+                        I'm proud of myself for porting it to html. I learned a bit of so many coding languages for unblocked games because funny
+                    </p>
+                    <p class="font">
+                        website only works on network thats entirely numbers
+                    </p>
+                    <p class="font" style="color: #ff40dc;">
+                        Message to any school admistrators who finds this.  Are you proud of me for making such an epic website? 
+                    </p>
+                    
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
