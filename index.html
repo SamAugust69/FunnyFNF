@@ -143,7 +143,14 @@
                     </p>
                     <script>
                         function funnysus() {
-                            document.getElementById("bruh_sus").style.backgroundImage = "url(sus.jpg)"
+                            var clicked = false;
+                            if (clicked == false) {
+                                document.getElementById("bruh_sus").style.backgroundImage = "url(sus.jpg)"
+                                clicked = true
+                            } else {
+                                document.getElementById("bruh_sus").style.backgroundImage = ""
+                                clicked = false
+                            }
                         }
                     </script>
                     <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
