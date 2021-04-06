@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>My Drive - Google Drive</title>
+        <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
         <style>
             :root {
                 --btn_pink: #ff40dc;
@@ -42,6 +44,19 @@
                 top:50%; 
                 left:50%;
             }
+            .amongus-funny-btn {
+                background-color: var(--btn_pink);
+                border: none;
+                color: white;
+                padding: 4px 8px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                transition-duration: 0.3s;
+                border-radius: 4px;
+                border: 2px solid var(--btn_pink);
+            }
             .run-game-btn svg {
                 display: inline-block;
                 vertical-align: middle;
@@ -79,7 +94,7 @@
             document.getElementById("gameDiv").innerHTML = '<iframe mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="http://73.4.188.149/bin/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
         }
     </script>
-    <body style="background-color: black; margin: 0;">
+    <body id="bruh_sus"style="background-color: black; margin: 0;">
         <!-- <ul id="funny_tools" class=>
             <a href="Trolled/trolled.html">pp lol</a>
         </ul> -->
@@ -126,7 +141,17 @@
                     <p class="font" style="color: #ff40dc;">
                         Message to any school admistrators who finds this.  Are you proud of me for making such an epic website? 
                     </p>
-                    
+                    <script>
+                        function funnysus() {
+                            document.getElementById("bruh_sus").style.backgroundImage = "url(sus.jpg)"
+                        }
+                    </script>
+                    <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
+                        Amognus moment
+                    </button>
+                    <p class="font">
+                        ^^Click for amogus funny hahah
+                    </p>
                 </p>
             </div>
         </div>
