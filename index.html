@@ -86,10 +86,14 @@
             a, a:link, a:visited { 
                 color: var(--link-color);
             }
+            .fullScreen {
+                width: 100vw;
+                height: 100vh;
+            }
         </style>
     </head>
     <script>
-        //data-iframe="&lt;iframe mozallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad&quot; frameborder=&quot;0&quot; src=&quot;//v6p9d9t4.ssl.hwcdn.net/html/2876359-359162/index.html&quot; msallowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; id=&quot;game_drop&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;"
+        //data-iframe="&lt;iframe mozallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad&quot; frameborder=&quot;0&quot; src=&quot;//v6p9d9t4.ssl.hwcdn.net/html/2876359-359162/index.html&quot; msallowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; id=&quot;game_drop&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;<button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="fullscreenMoment()"></button>"
         function gameDisplay() {
             document.getElementById("gameDiv").innerHTML = '<iframe mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Main/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
         }
@@ -108,7 +112,13 @@
                         </svg>
                         Run Game
                     </button>
-                </div>    
+                </div>
+                <!-- <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="fullscreenMoment()"></button>
+                <script>
+                    function fullscreenMoment() {
+
+                    }
+                </script> -->
             </div>
             <div style="margin-left: 10px;">
                 <p class="font">
@@ -145,7 +155,7 @@
                         var clicked = false;
                         function funnysus() {
                             if (clicked == false) {
-                                document.getElementById("bruh_sus").style.backgroundImage = "url(sus.jpg)";
+                                document.getElementById("bruh_sus").style.backgroundImage = "url(sus.png)";
                                 clicked = true;
                             } else {
                                 document.getElementById("bruh_sus").style.backgroundImage = "";
