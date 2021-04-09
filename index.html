@@ -126,19 +126,37 @@
                 </p>
                 <p class="font">
                     <script>
-                        function pickQuote() {
-                            var numb = Math.round(Math.random() * 2);
+                        function sleep(ms) {
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        } 
+                    </script>
+                    <script>  
+                        async function pickQuote() {
+                            var numb = Math.round(Math.random() * 3);
                             if (numb == 0) {
-                                document.getElementById("funnyWords").style.color = "#ff40dc"
-                                document.getElementById("funnyWords").textContent = "this is amongus moment real"
+                                document.getElementById("funnyWords").style.color = "#ff40dc";
+                                document.getElementById("funnyWords").textContent = "this is amongus moment real";
                             }
                             if (numb == 1) {
-                                document.getElementById("funnyWords").style.color == "#ff40dc"
-                                document.getElementById("funnyWords").textContent = "bout to amongus"
+                                document.getElementById("funnyWords").style.color == "#ff40dc";
+                                document.getElementById("funnyWords").textContent = "bout to amongus";
                             }
                             if (numb == 2) {
-                                document.getElementById("funnyWords").style.color = "#eb345e"
-                                document.getElementById("funnyWords").textContent = "I will literally destroy you on Fortnite. I am probably the best Fortnite player in the world. When I get a golden scar... you're dead. You lookin' like 500 mats and I'm out of wood. I'll make ninja look like a clown compared to my epic bro fortnite build battles."
+                                document.getElementById("funnyWords").style.color = "#eb345e";
+                                document.getElementById("funnyWords").textContent = "I will literally destroy you on Fortnite. I am probably the best Fortnite player in the world. When I get a golden scar... you're dead. You lookin' like 500 mats and I'm out of wood. I'll make ninja look like a clown compared to my epic bro fortnite build battles.";
+                            }
+                            if (numb == 3) {
+                                document.getElementById("funnyWords").textContent = "Self destruct...";
+                                await sleep(2500);
+                                document.getElementById("funnyWords").textContent = "3...";
+                                await sleep(1000);
+                                document.getElementById("funnyWords").textContent = "2...";
+                                await sleep(1000);
+                                document.getElementById("funnyWords").textContent = "1...";
+                                await sleep(1000);
+                                document.getElementById("funnyWords").textContent = "Bye bye";
+                                await sleep(500);
+                                document.getElementById("bruh_sus").innerHTML = "";
                             }
                         }
                     </script>
