@@ -1,0 +1,97 @@
+:root {
+    --btn_pink: #ff40dc;
+    --main_bg_color: #3841bb;
+    --game_bg_color: #4952cc;
+    --link-color: #FF3FAC;
+}
+.wrapper {
+    background-color: black;
+    width: auto;
+}
+.main_container {
+    background-color: var(--main_bg_color);
+    height:100%;
+    padding-top: 20px;
+}
+.game_container {
+    background-color: #4952cc;
+    max-width: 960px;
+    height: 540px;
+    justify-content: center;
+    align-items: center;
+}
+.run-game-btn {
+    background-color: var(--btn_pink);
+    border: none;
+    color: white;
+    padding: 12px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border-radius: 4px;
+    border: 2px solid var(--btn_pink);
+    vertical-align: middle;
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+.amongus-funny-btn {
+    background-color: var(--btn_pink);
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border-radius: 4px;
+    border: 2px solid var(--btn_pink);
+}
+.run-game-btn svg {
+    display: inline-block;
+    vertical-align: middle;
+    fill: var(--btn_pink);
+    width: 20px;
+    height: 20px;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    color: white;
+    stroke-width: 2;
+}
+.run-game-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--main_bg_color);
+}
+.test-shit {
+    display: inline-block;
+}
+.font {
+    color: white;
+    line-height: 1.4;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+}
+.var-font {
+    width: 25px;
+    font-size: 12px;
+    background: -webkit-linear-gradient(right, #30CFD0, #ff40dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 2px;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+a, a:link, a:visited { 
+    color: var(--link-color);
+}
+.fullScreen {
+    width: 100vw;
+    height: 100vh;
+}
