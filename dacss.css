@@ -91,7 +91,19 @@
 a, a:link, a:visited { 
     color: var(--link-color);
 }
-.fullScreen {
-    width: 100vw;
-    height: 100vh;
+.button-shit {
+    background-color: transparent;
+    border: none;
+    position:relative;
+    float: right;
+    cursor: pointer;
+}
+.image-shit {
+    opacity: .5;
+    height: 30px;
+    width: 30px;
+}
+.image-shit:hover {
+    opacity: .8;
+    transition: 0.2s;
 }
