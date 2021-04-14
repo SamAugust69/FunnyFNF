@@ -61,47 +61,12 @@
 			font-weight: normal;
 			font-style: normal;
 		}
-		.button-shit {
-			background-color: transparent;
-			border: none;
-			position:relative;
-			float: right;
-			cursor: pointer;
-		}
-		.image-shit {
-			opacity: .5;
-			height: 30px;
-			width: 30px;
-		}
-		.image-shit:hover {
-			opacity: .8;
-			transition: 0.2s;
-		}
 	</style>
 	
 </head>
 	<body>
 		<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
-		<button class="button-shit" onclick="fullscreen()"> 
-			<img src="https://itch.io/static/images/enlarge.svg?1618415110" class="image-shit">
-		</button>
 			<div id="openfl-content"></div>
-			<script>
-				function fullscreen() {
-					if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
-						var iframe = document.getElementById("openfl-content")
-						if (iframe.requestFullscreen) {
-						iframe.requestFullscreen();
-						} else if (iframe.webkitRequestFullscreen) {
-						iframe.webkitRequestFullscreen();
-						} else if (iframe.mozRequestFullScreen) {
-						iframe.mozRequestFullScreen();
-						} else if (iframe.msRequestFullscreen) {
-						iframe.msRequestFullscreen();
-						}
-					}
-				}
-			</script>
 			<script type="text/javascript">
 				lime.embed ("Funkin", "openfl-content", 1280, 720, { parameters: {} });
 			</script>
