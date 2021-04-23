@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Normal Versions",
+    "songs": [
+      // we use tjson so we can do comments and do some incorrect things
+      // the reason we use tjson is because json is hard
+      // The category screen won't show up unless there are more than 1 categories
+	"Tutorial",
+	"Bopeebo-Beta-Mix",
+	"Bopeebo-In-Game-Mix",
+	"Bopeebo-Extended-Version",
+	"Fresh",
+	"Fresh-In-Game-Mix",
+	"Fresh-Itchio-Build",
+	"Fresh-Alt-Version",
+	"Dadbattle-In-Game-Mix",
+	"South",
+	"South-In-Game-Mix",
+	"Pico",
+	"Philly",
+	"Blammed",
+	"Blammed-Week-4-Update",
+	"High",
+	"High-in-game-mix",
+	"Milf",
+	"Eggnog-Short-Mix",
+	"Winter-Horrorland-Short-Mix",
+	"Senpai",
+	"Roses",
+	"Thorns"
+	
+    ]
+  },
+  // trailing commas don't matter with tjson
+  // visual studio code is just pissy
+   {
+    "name": "Bsides",
+    "songs": [
+    "Fresh-Bside",
+    "Fresh-IGM-Bside",
+    "Dadbattle-IGM-Bside",
+    "Roses-Bside",
+    "Thorns-Bside",
+   ]
+  },
+  // trailing commas don't matter with tjson
+  // visual studio code is just pissy
+   {
+    "name": "Corruption",
+    "songs": [
+    "Fresh-IGM-Corrupt",
+    "Dadbattle-IGM-Corrupt",
+    "South-IGM-Corrupt",
+   ]
+  },
+  // trailing commas don't matter with tjson
+  // visual studio code is just pissy
+   {
+    "name": "Unofficial Rips",
+    "songs": [
+    "Among-Drip",
+    "Rodri-Pico",
+    "Ice-Roses",
+    "Mr-Roses",
+    "Roses-Chungus",
+   ]
+   },
+]
