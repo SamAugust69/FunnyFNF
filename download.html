@@ -17,6 +17,22 @@
             <a href="Trolled/trolled.html">pp lol</a>
         </ul> -->
         <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
+            <div class="game_container">
+                <script>
+                    function fullscreen() {
+                        if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
+                            var iframe = document.getElementById("realGame")
+                            if (iframe.requestFullscreen) {
+                            iframe.requestFullscreen();
+                            } else if (iframe.webkitRequestFullscreen) {
+                            iframe.webkitRequestFullscreen();
+                            } else if (iframe.mozRequestFullScreen) {
+                            iframe.mozRequestFullScreen();
+                            } else if (iframe.msRequestFullscreen) {
+                            iframe.msRequestFullscreen();
+                            }
+                        }
+                    }
                 </script>
                 <div id="gameDiv" style="height: 100%; width: 100%;">
                     <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="gameDisplay()">
