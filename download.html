@@ -17,39 +17,6 @@
             <a href="Trolled/trolled.html">pp lol</a>
         </ul> -->
         <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
-            <div class="game_container">
-                <script>
-                    function fullscreen() {
-                        if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
-                            var iframe = document.getElementById("realGame")
-                            if (iframe.requestFullscreen) {
-                            iframe.requestFullscreen();
-                            } else if (iframe.webkitRequestFullscreen) {
-                            iframe.webkitRequestFullscreen();
-                            } else if (iframe.mozRequestFullScreen) {
-                            iframe.mozRequestFullScreen();
-                            } else if (iframe.msRequestFullscreen) {
-                            iframe.msRequestFullscreen();
-                            }
-                        }
-                    }
-                </script>
-                <div id="gameDiv" style="height: 100%; width: 100%;">
-                    <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="gameDisplay()">
-                        <svg style="stroke: white;" version="1.1" viewBox="0 0 24 24"  stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                        </svg>
-                        Run Game
-                    </button>
-                </div>
-                <!-- <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="fullscreenMoment()"></button>
-                <script>
-                    function fullscreenMoment() {
-
-                    }
-                </script> -->
-            </div>
             <div style="margin-left: 10px;">
                 <p class="font">
                     <strong>Friday Night Funkin' Kade Engine Port</strong>
