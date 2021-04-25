@@ -1,5 +1,0 @@
-normal
-pixel
-templatePixel
-template
-penguin
