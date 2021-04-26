@@ -63,7 +63,7 @@
                     } 
                     var clickable = true
                     async function pickQuote() {
-                        var numb = Math.round(Math.random() * 3);
+                        var numb = Math.round(Math.random() * 4);
                         if (clickable == true) {
                             if (numb == 0) {
                                 document.getElementById("funnyWords").style.color = "#ff40dc";
@@ -92,6 +92,10 @@
                                 document.getElementById("funnyWords").textContent = "Bye bye";
                                 await sleep(500);
                                 document.getElementById("bruh_sus").innerHTML = "";
+                            }
+                            if (numb == 4) {
+                                document.getElementById("bruh_sus").style.backgroundImage = "url(Images/amongus.png)";
+                                document.getElementById("funnyWords").textContent = "ayo check out my poster for steam";
                             }
                         }
                     }
