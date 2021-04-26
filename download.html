@@ -5,107 +5,45 @@
         <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
         <link href="dacss.css" rel="stylesheet">
     </head>
-    <script>
-        //data-iframe="&lt;iframe mozallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad&quot; frameborder=&quot;0&quot; src=&quot;//v6p9d9t4.ssl.hwcdn.net/html/2876359-359162/index.html&quot; msallowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; id=&quot;game_drop&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;<button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="fullscreenMoment()"></button>"
-        async function gameDisplay() {
-            document.getElementById("gameDiv").innerHTML = '<iframe id="realGame" mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Main/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
-            document.getElementById("gameDiv").innerHTML += '<button class="button-shit" onclick="fullscreen()"><img src="https://itch.io/static/images/enlarge.svg?1618415110" class="image-shit"></button>'
-        }
-    </script>
     <body id="bruh_sus"style="background-color: black; margin: 0;">
-        <!-- <ul id="funny_tools" class=>
-            <a href="Trolled/trolled.html">pp lol</a>
-        </ul> -->
         <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
-            <div style="margin-left: 10px;">
-                <p class="font">
-                    <strong>Friday Night Funkin' Kade Engine Port</strong>
-                </p>
-                <script>  
-                    function sleep(ms) {
-                        return new Promise(resolve => setTimeout(resolve, ms));
-                    } 
-                    var clickable = true
-                    async function pickQuote() {
-                        var numb = Math.round(Math.random() * 3);
-                        if (clickable == true) {
-                            if (numb == 0) {
-                                document.getElementById("funnyWords").style.color = "#ff40dc";
-                                document.getElementById("funnyWords").textContent = "this is amongus moment real";
-                            }
-                            if (numb == 1) {
-                                document.getElementById("funnyWords").style.color == "#ff40dc";
-                                document.getElementById("funnyWords").textContent = "bout to amongus";
-                            }
-                            if (numb == 2) {
-                                document.getElementById("funnyWords").style.color = "#eb345e";
-                                document.getElementById("funnyWords").textContent = "I will literally destroy you on Fortnite. I am probably the best Fortnite player in the world. When I get a golden scar... you're dead. You lookin' like 500 mats and I'm out of wood. I'll make ninja look like a clown compared to my epic bro fortnite build battles.";
-                            }
-                            if (numb == 3) {
-                                clickable = false
-                                document.getElementById("funnyWords").textContent = "Self destruct...";
-                                await sleep(2500);
-                                document.getElementById("funnyWords").textContent = "3...";
-                                await sleep(1000);
-                                document.getElementById("funnyWords").textContent = "2...";
-                                await sleep(1000);
-                                document.getElementById("funnyWords").textContent = "1...";
-                                await sleep(1000);
-                                document.getElementById("funnyWords").style.color = "#e80036"
-                                document.getElementById("funnyWords").textContent = "Bye bye";
-                                await sleep(500);
-                                document.getElementById("bruh_sus").innerHTML = "";
-                            }
+            <script>
+                function dropHandler(ev) {
+                    console.log('File(s) dropped');
+
+                    function preventDefaults (ev) {
+                        ev.preventDefault()
+                        ev.stopPropagation()
+                    }
+                    // Prevent default behavior (Prevent file from being opened)
+                    preventDefault(ev);
+
+                    if (ev.dataTransfer.items) {
+                        // Use DataTransferItemList interface to access the file(s)
+                        for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+                        // If dropped items aren't files, reject them
+                        if (ev.dataTransfer.items[i].kind === 'file') {
+                            var file = ev.dataTransfer.items[i].getAsFile();
+                            console.log('... file[' + i + '].name = ' + file.name);
+                        }
+                        }
+                    } else {
+                        // Use DataTransfer interface to access the file(s)
+                        for (var i = 0; i < ev.dataTransfer.files.length; i++) {
+                        console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
                         }
                     }
-                </script>
-                <p class="font">
-                    <em>
-                        <strong>
-                        REMAKE OF THE ITCH.IO FNF WEBPAGE
-                        <a href="https://ninja-muffin24.itch.io/funkin" rel="nofollow noopener">https://ninja-muffin24.itch.io/funkin</a>
-                        </strong>
-                    </em>
-                    <p class="font" id="funnyWords" style="color: var(--btn_pink)">
-
-                    </p>
-                    <p class="font">
-                        I'm proud of myself for porting it to html. I learned a bit of so many coding languages for unblocked games because funny
-                    </p>
-                    <p class="font">
-                        Hop on amongus I'll crank mad 90's bro
-                    </p>
-                    <script>
-                        var clicked = false;
-                        function funnysus() {
-                            if (clicked == false) {
-                                document.getElementById("bruh_sus").style.backgroundImage = "url(sus.png)";
-                                pickQuote()
-                                clicked = true;
-                            } else {
-                                document.getElementById("bruh_sus").style.backgroundImage = "";
-                                clicked = false;
-                            }
-                        }
-                    </script>
-                    <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
-                        Amognus moment
-                    </button>
-                    <p class="font">
-                        ^^Click for amogus funny hahah
-                    </p>
-                    <p class="font">
-                        Break spine simulator
-                        <a href="https://samaugust69.github.io/FunnyFNF/testing/">https://samaugust69.github.io/FunnyFNF/testing/</a>
-                        It's slightly broken I don't recommend it
-                    </p>
-                    <p class="font" style="color: #ff40dc;">
-                        Message to any school admistrators who finds this.  Are you proud of me for making such an epic website? 
-                    </p>
+                }
+            </script>
+            <div class="drop_files" ondrop="dropHandler(event);"ondragover="dragOverHandler(event);">
+                
+            </div>
+            <div class="download_main_container">
+                <div style="margin-left: 10px;">
                     <p class="var-font">
                         v1.1
                     </p>
-                </p>
+                </div>
             </div>
         </div>
     </body>

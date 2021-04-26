@@ -10,10 +10,30 @@
 }
 .main_container {
     background-color: var(--main_bg_color);
-    height:100%;
     padding-top: 20px;
+    min-height: 100%;
+    max-width: 960px;
+    margin: auto;
+}
+.download_main_container {
+    background-color: var(--main_bg_color);
+    min-height: 100%;
+    max-width: 960px;
+    margin: auto;
+}
+.header_type_beat {
+    background-color: var(--main_bg_color);
+    margin: auto;
+    max-width: 960px;
 }
 .game_container {
+    background-color: #4952cc;
+    max-width: 960px;
+    height: 540px;
+    justify-content: center;
+    align-items: center;
+}
+.drop_files {
     background-color: #4952cc;
     max-width: 960px;
     height: 540px;
@@ -76,6 +96,13 @@
     font-family: sans-serif;
     font-size: 16px;
     padding-left: 5px;
+}
+.download_font {
+    color: white;
+    line-height: 1.4;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 .var-font {
     width: 30px;
