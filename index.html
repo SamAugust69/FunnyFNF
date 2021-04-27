@@ -129,12 +129,17 @@
                             }
                         }
                     </script>
-                    <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
-                        Amognus moment
-                    </button>
-                    <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="loadBeta()">
-                        Load Beta
-                    </button>
+                    <inline class="inline_w_buttons">
+                        <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
+                            Amognus moment
+                        </button>
+                        <button id="load-game_beta" class="amongus-funny-btn" style="font-weight: bold;" onclick="loadBeta()">
+                            Load Beta
+                        </button>
+                        <p class="font" id="inline_disc" style="display: inline-block; margin: 0; color: rgba(245, 245, 245, 0.637); ">
+                            < loads version with tons of mods but itsn't polished(looks like shit)
+                        </p>
+                    </inline>
                     <p class="font">
                         ^^Click for amogus funny hahah
                     </p>
@@ -149,3 +154,13 @@
         </div>
     </body>
 </html>
+
+<!-- 
+    Ideas for settings:
+        volume warning setting 
+            Potential ideas
+            1. Simple on/off switch that'll, based on if it's on or off, will send a message to the user before opening the game to turn off volume.        << This is easy, make for demo
+                Use cookies to save the option - make settings page.
+            2. Detect if volume is over 0 and if so, send an alert to the user to turn it off.
+                Make settings page - have default game volume setter - volume setter will be used to detect of game volume is above 0(default = 100)        << This is hard, make if number 1 goes well.
+ -->

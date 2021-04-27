@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Real Bruh</title>
+        <link href="dacss.css" rel="stylesheet">
+        <script>
+            function setCookie(cname,cvalue,exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+    
+            function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+            }
+    
+            function checkCookie() {
+            var user=getCookie("username");
+            if (user != "") {
+                alert("yo" + user)
+                return "true";
+            } else {
+                user = prompt("Please enter your name:","");
+                if (user != "" && user != null) {
+                console.log("You have no uhh name")
+                return "false";
+                }
+            }
+            }
+            function removeCookie() {
+                document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            }
+            function createCookie() {
+            var user=getCookie("username");
+            if (false) {
+                document.getElementById("funny").style.backgroundColor = "red"
+                user = prompt("Please enter your name:","");
+                setCookie("user", user, 30, SameSite=None);
+            } else {
+                document.getElementById("funny").style.backgroundColor = "green"
+                alert("you have a name")
+            }
+            }
+            </script>
+    </head>
+    <body onload="createCookie()">
+            <button onclick="createCookie()">
+                ayo set it
+            </button>
+            <button onclick="removeCookie()">
+                ayo delete it
+            </button>
+            <p style="background-color: red;" id="funny">
+                joe mam
+            </p>
+    </body>
+</html>
+
+<!-- 
+    Ideas for settings:
+        volume warning setting 
+            Potential ideas
+            1. Simple on/off switch that'll, based on if it's on or off, will send a message to the user before opening the game to turn off volume.        << This is easy, make for demo
+                Use cookies to save the option - make settings page.
+            2. Detect if volume is over 0 and if so, send an alert to the user to turn it off.
+                Make settings page - have default game volume setter - volume setter will be used to detect of game volume is above 0(default = 100)        << This is hard, make if number 1 goes well.
+ -->

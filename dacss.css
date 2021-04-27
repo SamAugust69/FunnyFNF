@@ -142,3 +142,12 @@ a, a:link, a:visited {
     background-color: black;
     border-color: white;
 }
+.inline_w_buttons {
+    margin: 0;
+}
+#inline_disc {
+    visibility: hidden;
+}
+#load-game_beta:hover ~ #inline_disc {
+    visibility: visible;
+}
