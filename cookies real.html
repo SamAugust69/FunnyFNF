@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real Bruh</title>
+    <link href="dacss.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        var myAudio,
+            myVolume = 100,
+            $volume = $('#volume');
+
+        $volume.slider({
+            value: myVolume,
+            min: 0,
+            max: 100,
+            step: 0.1,
+            slide: function(e, ui) {
+                if (myAudio) myAudio.setVolume(ui.value);
+            },
+            stop: function(e, ui) {
+                myVolume = ui.value;
+            }
+        });
+
+        // every time you wan to play a new sound
+        myAudio = soundManager.createSound({
+            url: '/path/to/song.mp3'
+            volume: $volume.slider('value')
+        });
+    </script>
+    <div class="slidecontainer">
+        <input type="range" step=".05" min="0" max="1" value=".50" class="slider " id="volSlider">
+        <span class="funynhaha">
+                75
+        </span>
+        <button class="disButton">
+            disable volume
+        </button>
+        <script src="test.js"></script>
+    </div>
+    <iframe class="epicgame" id="realGame" mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Beta/\" msallowfullscreen="true"
+        scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>
+</body>
+
+</html>
+
+<!-- 
+    Ideas for settings:
+        volume warning setting 
+            Potential ideas
+            1. Simple on/off switch that'll, based on if it's on or off, will send a message to the user before opening the game to turn off volume.        << This is easy, make for demo
+                Use cookies to save the option - make settings page.
+            2. Detect if volume is over 0 and if so, send an alert to the user to turn it off.
+                Make settings page - have default game volume setter - volume setter will be used to detect of game volume is above 0(default = 100)        << This is hard, make if number 1 goes well.
+ -->
