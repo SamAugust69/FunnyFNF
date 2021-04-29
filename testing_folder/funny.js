@@ -1,0 +1,1 @@
+var funnybtn = document.querySelector(".testbtn")
