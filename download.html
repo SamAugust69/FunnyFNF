@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Drive - Google Drive</title>
+        <title>Download - Google Drive</title>
         <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
-        <link href="dacss.css" rel="stylesheet">
+        <link href="download.css" rel="stylesheet">
     </head>
     <body id="bruh_sus"style="background-color: black; margin: 0;">
         <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
-            <script>
-                function dropHandler(ev) {
-                    console.log('File(s) dropped');
-
-                    function preventDefaults (ev) {
-                        ev.preventDefault()
-                        ev.stopPropagation()
-                    }
-                    // Prevent default behavior (Prevent file from being opened)
-                    preventDefault(ev);
-
-                    if (ev.dataTransfer.items) {
-                        // Use DataTransferItemList interface to access the file(s)
-                        for (var i = 0; i < ev.dataTransfer.items.length; i++) {
-                        // If dropped items aren't files, reject them
-                        if (ev.dataTransfer.items[i].kind === 'file') {
-                            var file = ev.dataTransfer.items[i].getAsFile();
-                            console.log('... file[' + i + '].name = ' + file.name);
-                        }
-                        }
-                    } else {
-                        // Use DataTransfer interface to access the file(s)
-                        for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-                        console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
-                        }
-                    }
-                }
-            </script>
-            <div class="drop_files" ondrop="dropHandler(event);"ondragover="dragOverHandler(event);">
-                
+            <div class="drop_files">
+                <p>
+                    <p class="header-font">
+                        Downloading Process
+                    </p>
+                    <p class="font">
+                        Download Forge 1.12.2 CLIENT
+                        <a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html">http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html</a>
+                        <p class="font">
+                            Press the windows key and search %appdata% and open. Open the .minecraft folder and drag and drop
+                            <a class="special-link" href="mods.zip" download="mods">THIS FOLDER</a>
+                            there.
+                        </p>
+                        <p class="header-font">
+                            Server Info
+                        </p>
+                        <p class="font">
+                            IP: 73.4.188.149:25566
+                        </p>    
+                        <p class="font">
+                            Server Version: Forge 1.12.2
+                        </p>    
+                    </p>
+                </p>
             </div>
             <div class="download_main_container">
                 <div style="margin-left: 10px;">
                     <p class="var-font">
-                        v1.1
+                        Download v1
                     </p>
                 </div>
             </div>
