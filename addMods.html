@@ -1,51 +1,23 @@
 <!DOCTYPE html>
 <html style="background-color: gray;">
-    <head>
-        <title>mods are funny</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    </head>
+<head>
+    <title>mods are funny</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    <div style="background-color: rgb(67, 64, 64);">
-        <table class="funnyahhtable" id="table">
-            <tr>
-                <th style="color: honeydew;">Mod</th><th style="color: honeydew;">Link</th>
-            </tr>
-        </table>
-    </div>
-    <input> <button>Save</button>
-    <script src="fuckyou.js"></script>
-    <script>
-        window.nodeRequire = require;
-        delete window.require;
-        delete window.exports;
-        delete window.module;
-        var fs = require('fs')
-        var table = document.getElementById("modTable")
-        fs.readFile('./mods.json', 'utf8', (jsonString) => {
-            return JSON.parse(jsonString); 
-        })
-        function buildTable(data){
-            for (var i = 0; i < data.length; i++) {
-                var row = "<tr><td>${data[i].mod}</td></tr>"
-                table.innerHTML += row
-            }
-        }
-        buildTable(readFile("mods.json"))
-        $(document).ready(function(){
-            $.getJSON("mods.json", function(data) {
-                var mod_data = '';
-                $.each(data, function(key, value) {
-                    console.log(value.modLink)
-                    mod_data += "<tr>";
-                    mod_data += '<td style="color: rgb(212, 225, 212);">'+value.modLink+"</td>";
-                    mod_data += '<td style="color: rgb(212, 225, 212);">'+value.mod+"</td>";
-                    mod_data += "</tr>"
-                });
-                $("#table").append(mod_data);
-            });
-        });
-    </script>
+</head>
+
+<div style="background-color: rgb(67, 64, 64);">
+    <table class="funnyahhtable" id="table">
+        <tr>
+            <th style="color: honeydew;">Mod</th>
+            <th style="color: honeydew;">Link</th>
+        </tr>
+    </table>
+</div>
+<input> <button>Save</button>
+<script src="fuckyou.js"></script>
+
 </html>
