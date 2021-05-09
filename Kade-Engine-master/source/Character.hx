@@ -621,6 +621,43 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -30, -40);
 				
 				playAnim('idle');
+			case 'garcellotired':
+				tex = Paths.getSparrowAtlas('smoke/garcellotired_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'garcellotired idle dance', 24, false);
+				animation.addByPrefix('singUP', 'garcellotired Sing Note UP', 24, false);
+				animation.addByPrefix('singDOWN', 'garcellotired Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'garcellotired Sing Note LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'garcellotired Sing Note RIGHT', 24, false);
+				animation.addByPrefix('cough', 'garcellotired cough', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", -20, 50);
+				addOffset("singRIGHT", -51);
+				addOffset("singLEFT", -30);
+				addOffset("singDOWN", -30, -40);
+				addOffset("cough", -40);
+				
+				playAnim('idle');
+				
+			case 'garcellodead':
+				tex = Paths.getSparrowAtlas('smoke/garcellodead_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'garcello idle dance', 24, false);
+				animation.addByPrefix('singUP', 'garcello Sing Note UP', 24, false);
+				animation.addByPrefix('singDOWN', 'garcello Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'garcello Sing Note LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'garcello Sing Note RIGHT', 24, false);
+				animation.addByPrefix('tightbars', 'garcello coolguy', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", -20, 50);
+				addOffset("singRIGHT", -51);
+				addOffset("singLEFT", -30);
+				addOffset("singDOWN", -30, -40);
+				addOffset("tightbars", -40);
+
+				playAnim('idle');
 		}
 
 		dance();

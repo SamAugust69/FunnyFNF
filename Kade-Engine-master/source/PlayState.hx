@@ -559,39 +559,125 @@ class PlayState extends MusicBeatState
 			}
 			case "overwrite": 
 				{
-					curStage = 'bg';
+					defaultCamZoom = 0.7;
+					curStage = 'ovStage';
 
-					var posX = 400;
-					var posY = 200;
+					var posX = -600;
+					var posY = -200;
 
-					var bg:FlxSprite = new FlxSprite(posX, posY);
-					bg.frames = Paths.getSparrowAtlas('overwrite_bg');
+					var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/overwrite_bg'));
 					bg.antialiasing = true;
 					bg.scrollFactor.set(0.9, 0.9);
-					bg.scale.set(6, 6);
 					add(bg);
 
-					var bg:FlxSprite = new FlxSprite(posX, posY);
-					bg.frames = Paths.getSparrowAtlas('overwrite_light');
-					bg.antialiasing = true;
-					bg.scrollFactor.set(0.9, 0.9);
-					bg.scale.set(6, 6);
+					var light:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/overwrite_light'));
+					light.antialiasing = true;
+					light.scrollFactor.set(0.9, 0.9);
 					add(bg);
 				}
 
-			case "light-it-up":
+			case "light-it-up" | "ruckus" | "target-practice":
 				{
-					var posX = 400;
-					var posY = 200;
+					var posX = -600;
+					var posY = -200;
 
 					curStage = 'stage';
-					var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('swordfight'));
+					var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('vsmatt/images/swordfight'));
 					bg.antialiasing = true;
 					bg.scrollFactor.set(0.9, 0.9);
 					bg.active = false;
 					add(bg);
 				}
-			
+			case "sporting" | "boxing-match":
+				{
+					
+					var posX = -600;
+					var posY = -200;
+
+					curStage = 'stage';
+					var bg1:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('vsmatt/images/boxingnight2'));
+					bg1.antialiasing = true;
+					bg1.scrollFactor.set(0.9, 0.9);
+					bg1.active = false;
+					add(bg1);
+					var bg2:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('vsmatt/images/boxingnight3'));
+					bg2.antialiasing = true;
+					bg2.scrollFactor.set(0.9, 0.9);
+					bg2.active = false;
+					add(bg2);
+				}
+			case "inkingmistake":
+				{	
+					defaultCamZoom = 0.7;	
+					var posX = -600;
+					var posY = -200;
+					
+					curStage = 'inkStage';
+					var bg0:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg0'));
+					bg0.antialiasing = true;
+					bg0.scrollFactor.set(0.9, 0.9);
+					bg0.active = false;
+					add(bg0);
+					var bg1:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg1'));
+					bg1.antialiasing = true;
+					bg1.scrollFactor.set(0.9, 0.9);
+					bg1.active = false;
+					add(bg1);
+					var bg2:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg2'));
+					bg2.antialiasing = true;
+					bg2.scrollFactor.set(0.9, 0.9);
+					bg2.active = false;
+					add(bg2);
+					var bg3:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg3'));
+					bg3.antialiasing = true;
+					bg3.scrollFactor.set(0.9, 0.9);
+					bg3.active = false;
+					add(bg3);
+					var bg4:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg4'));
+					bg4.antialiasing = true;
+					bg4.scrollFactor.set(0.9, 0.9);
+					bg4.active = false;
+					add(bg4);
+					var bg5:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg5'));
+					bg5.antialiasing = true;
+					bg5.scrollFactor.set(0.9, 0.9);
+					bg5.active = false;
+					add(bg5);
+					var bg6:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/bg6'));
+					bg6.antialiasing = true;
+					bg6.scrollFactor.set(0.9, 0.9);
+					bg6.active = false;
+					add(bg6);
+					var fg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/fg'));
+					fg.antialiasing = true;
+					fg.scrollFactor.set(0.9, 0.9);
+					fg.active = false;
+					add(fg);
+					var ground:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('x-event/images/ground'));
+					ground.antialiasing = true;
+					ground.scrollFactor.set(0.9, 0.9);
+					ground.active = false;
+					add(ground);
+				}
+			case "headache" | "nerves":
+				{
+					var posX = -600;
+					var posY = -200;
+
+					defaultCamZoom = 0.9;	
+					curStage = 'stage';
+					var stage:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('smoke/images/garStage'));
+					stage.antialiasing = true;
+					stage.scrollFactor.set(0.9, 0.9);
+					stage.active = false;
+					var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('smoke/images/garStagebg'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
+					add(stage);
+				}
+
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -682,11 +768,13 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'xchara':
 				dad.y += 250;
+			case 'matt' | 'mattmad':
+				dad.y += 300;
+				dad.x += 200;
+			case 'ink':
+				dad.y += 300;
+			
 		}
-		
-
-
-		
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
 
 		// REPOSITIONING PER STAGE
@@ -723,6 +811,8 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'inkingmistake':
+				gf.setGraphicSize(50, 50);
 		}
 
 		add(gf);
@@ -1027,6 +1117,7 @@ class PlayState extends MusicBeatState
 
 		generateStaticArrows(0);
 		generateStaticArrows(1);
+		generateStaticArrows(2);
 
 		talking = false;
 		startedCountdown = true;
@@ -1188,7 +1279,7 @@ class PlayState extends MusicBeatState
 		// Song check real quick
 		switch(curSong)
 		{
-			case 'Bopeebo' | 'Philly' | 'Blammed' | 'Cocoa' | 'Eggnog': allowedToHeadbang = true;
+			case 'Bopeebo' | 'Philly' | 'Blammed' | 'Cocoa' | 'Eggnog' | 'Nerves' | 'Release': allowedToHeadbang = true;
 			default: allowedToHeadbang = false;
 		}
 		
@@ -1311,6 +1402,42 @@ class PlayState extends MusicBeatState
 
 			switch (curStage)
 			{
+				//waypoint
+				case 'inkStage' | 'ovStage':
+					babyArrow.frames = Paths.getSparrowAtlas('x-event/images/NOTE_xevent');
+					babyArrow.animation.addByPrefix('green', 'green');
+					babyArrow.animation.addByPrefix('blue', 'blue');
+					babyArrow.animation.addByPrefix('purple', 'purple');
+					babyArrow.animation.addByPrefix('red', 'red');
+
+					babyArrow.antialiasing = true;
+					babyArrow.updateHitbox();
+					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
+
+					switch (Math.abs(i))
+					{
+						case 0:
+							babyArrow.x += Note.swagWidth * 0;
+							babyArrow.animation.addByPrefix('static', 'arrowLEFT');
+							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
+							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
+						case 1:
+							babyArrow.x += Note.swagWidth * 1;
+							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
+							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
+							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
+						case 2:
+							babyArrow.x += Note.swagWidth * 2;
+							babyArrow.animation.addByPrefix('static', 'arrowUP');
+							babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
+							babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
+						case 3:
+							babyArrow.x += Note.swagWidth * 3;
+							babyArrow.animation.addByPrefix('static', 'arrowRIGHT');
+							babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
+							babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
+					}
+
 				case 'school' | 'schoolEvil':
 					babyArrow.loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
 					babyArrow.animation.add('green', [6]);
@@ -1825,6 +1952,20 @@ class PlayState extends MusicBeatState
 										triggeredAlready = true;
 									}
 								}else triggeredAlready = false;
+							}
+						}
+						case 'Nerves':
+						{
+							if (curStep == 28 || curStep == 244 || curStep == 252 || curStep == 260 || curStep == 268 || curStep == 276 || curStep == 444 || curStep == 732)
+							{
+								dad.playAnim('cough');
+							}
+						}
+						case 'Release':
+						{
+							if (curStep == 838)
+							{
+								dad.playAnim('tightbars');
 							}
 						}
 					}

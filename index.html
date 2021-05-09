@@ -1,143 +1,147 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Drive - Google Drive</title>
-        <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
-        <link href="dacss.css" rel="stylesheet">
-    </head>
-    <script>
-        async function gameDisplay() {
-            document.getElementById("gameDiv").innerHTML = '<iframe id="realGame" mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Main/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
-            document.getElementById("gameDiv").innerHTML += '<button class="button-shit" onclick="fullscreen()"><img src="https://samaugust69.github.io/FunnyFNF/Images/full.png" class="image-shit"></button>'
-        }
-        function loadBeta() {
-            document.getElementById("gameDiv").innerHTML = '<iframe id="realGame" mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Beta/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
-            document.getElementById("gameDiv").innerHTML += '<button class="button-shit" onclick="fullscreen()"><img src="https://samaugust69.github.io/FunnyFNF/Images/full.png" class="image-shit"></button>'
-        }
-    </script>
-    <body id="bruh_sus"style="background-color: black; margin: 0;">
-        <ul id="funny_tools" class="ul-test">
-            <a href="Trolled/trolled.html">pp lol</a>
-        </ul>
-        <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
-            <div class="game_container">
-                <script>
-                    function fullscreen() {
-                        if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
-                            var iframe = document.getElementById("realGame")
-                            if (iframe.requestFullscreen) {
+
+<head>
+    <title>My Drive - Google Drive</title>
+    <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
+    <link href="dacss.css" rel="stylesheet">
+</head>
+<script>
+    async function gameDisplay() {
+        document.getElementById("gameDiv").innerHTML = '<iframe id="realGame" mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Main/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
+        document.getElementById("gameDiv").innerHTML += '<button class="button-shit" onclick="fullscreen()"><img src="https://samaugust69.github.io/FunnyFNF/Images/full.png" class="image-shit"></button>'
+    }
+
+    function loadBeta() {
+        document.getElementById("gameDiv").innerHTML = '<iframe id="realGame" mozallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad" frameborder="0" src="https://samaugust69.github.io/FunnyFNF/Beta/\" msallowfullscreen="true" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" id="game_drop" allowtransparency="true" style="height: 100%; width: 100%;"></iframe>'
+        document.getElementById("gameDiv").innerHTML += '<button class="button-shit" onclick="fullscreen()"><img src="https://samaugust69.github.io/FunnyFNF/Images/full.png" class="image-shit"></button>'
+    }
+</script>
+
+<body id="bruh_sus" style="background-color: black; margin: 0;">
+    <ul id="funny_tools" class="ul-test">
+        <a href="Trolled/trolled.html">pp lol</a>
+    </ul>
+    <div class="main_container" style="min-height: 100%; max-width: 960px; margin: auto;">
+        <div class="game_container">
+            <script>
+                function fullscreen() {
+                    if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
+                        var iframe = document.getElementById("realGame")
+                        if (iframe.requestFullscreen) {
                             iframe.requestFullscreen();
-                            } else if (iframe.webkitRequestFullscreen) {
+                        } else if (iframe.webkitRequestFullscreen) {
                             iframe.webkitRequestFullscreen();
-                            } else if (iframe.mozRequestFullScreen) {
+                        } else if (iframe.mozRequestFullScreen) {
                             iframe.mozRequestFullScreen();
-                            } else if (iframe.msRequestFullscreen) {
+                        } else if (iframe.msRequestFullscreen) {
                             iframe.msRequestFullscreen();
-                            }
                         }
                     }
-                </script>
-                <div id="gameDiv" style="height: 100%; width: 100%;">
-                    <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="gameDisplay()">
+                }
+            </script>
+            <div id="gameDiv" style="height: 100%; width: 100%;">
+                <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="gameDisplay()">
                         <svg style="stroke: white;" version="1.1" viewBox="0 0 24 24"  stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="10 8 16 12 10 16 10 8"></polygon>
                         </svg>
                         Run Game
                     </button>
-                </div>
-                <!-- <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="fullscreenMoment()"></button>
+            </div>
+            <!-- <button id="load-game" class="run-game-btn" style="font-weight: bold;" onclick="fullscreenMoment()"></button>
                 <script>
                     function fullscreenMoment() {
 
                     }
                 </script> -->
-            </div>
-            <div style="margin-left: 10px;">
-                <p class="font">
-                    <strong>Friday Night Funkin' Kade Engine Port</strong>
-                </p>
-                <script>  
-                    function sleep(ms) {
-                        return new Promise(resolve => setTimeout(resolve, ms));
-                    } 
-                    var clickable = true
-                    async function pickQuote() {
-                        var numb = Math.round(Math.random() * 4);
-                        if (clickable == true) {
-                            if (numb == 0) {
-                                document.getElementById("funnyWords").style.color = "#ff40dc";
-                                document.getElementById("funnyWords").textContent = "this is amongus moment real";
-                            }
-                            if (numb == 1) {
-                                document.getElementById("bruh_sus").style.backgroundImage = "url(Images/card.jfif)";
-                                document.getElementById("funnyWords").style.color == "#ff40dc";
-                                document.getElementById("funnyWords").textContent = "bout to amongus";
-                            }
-                            if (numb == 2) {
-                                document.getElementById("funnyWords").style.color = "#eb345e";
-                                document.getElementById("funnyWords").textContent = "I will literally destroy you on Fortnite. I am probably the best Fortnite player in the world. When I get a golden scar... you're dead. You lookin' like 500 mats and I'm out of wood. I'll make ninja look like a clown compared to my epic bro fortnite build battles.";
-                            }
-                            if (numb == 3) {
-                                clickable = false
-                                document.getElementById("funnyWords").textContent = "Self destruct...";
-                                await sleep(2500);
-                                document.getElementById("funnyWords").textContent = "3...";
-                                await sleep(1000);
-                                document.getElementById("funnyWords").textContent = "2...";
-                                await sleep(1000);
-                                document.getElementById("funnyWords").textContent = "1...";
-                                await sleep(1000);
-                                document.getElementById("funnyWords").style.color = "#e80036"
-                                document.getElementById("funnyWords").textContent = "Bye bye";
-                                await sleep(500);
-                                document.getElementById("bruh_sus").innerHTML = "";
-                            }
-                            if (numb == 4) {
-                                document.getElementById("bruh_sus").style.backgroundImage = "url(Images/amongus.png)";
-                                document.getElementById("funnyWords").textContent = "ayo check out my poster for steam";
-                            }
+        </div>
+        <div style="margin-left: 10px;">
+            <p class="font">
+                <strong>Friday Night Funkin' Kade Engine Port</strong>
+            </p>
+            <script>
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+                var clickable = true
+                async function pickQuote() {
+                    var numb = Math.round(Math.random() * 4);
+                    if (clickable == true) {
+                        if (numb == 0) {
+                            document.getElementById("funnyWords").style.color = "#ff40dc";
+                            document.getElementById("funnyWords").textContent = "this is amongus moment real";
+                        }
+                        if (numb == 1) {
+                            document.getElementById("bruh_sus").style.backgroundImage = "url(Images/card.jfif)";
+                            document.getElementById("funnyWords").style.color == "#ff40dc";
+                            document.getElementById("funnyWords").textContent = "bout to amongus";
+                        }
+                        if (numb == 2) {
+                            document.getElementById("funnyWords").style.color = "#eb345e";
+                            document.getElementById("funnyWords").textContent = "I will literally destroy you on Fortnite. I am probably the best Fortnite player in the world. When I get a golden scar... you're dead. You lookin' like 500 mats and I'm out of wood. I'll make ninja look like a clown compared to my epic bro fortnite build battles.";
+                        }
+                        if (numb == 3) {
+                            clickable = false
+                            document.getElementById("funnyWords").textContent = "Self destruct...";
+                            await sleep(2500);
+                            document.getElementById("funnyWords").textContent = "3...";
+                            await sleep(1000);
+                            document.getElementById("funnyWords").textContent = "2...";
+                            await sleep(1000);
+                            document.getElementById("funnyWords").textContent = "1...";
+                            await sleep(1000);
+                            document.getElementById("funnyWords").style.color = "#e80036"
+                            document.getElementById("funnyWords").textContent = "Bye bye";
+                            await sleep(500);
+                            document.getElementById("bruh_sus").innerHTML = "";
+                        }
+                        if (numb == 4) {
+                            document.getElementById("bruh_sus").style.backgroundImage = "url(Images/amongus.png)";
+                            document.getElementById("funnyWords").textContent = "ayo check out my poster for steam";
                         }
                     }
-                </script>
-                <p class="font">
-                    <em>
+                }
+            </script>
+            <p class="font">
+                <em>
                         <strong>
                         REMAKE OF THE ITCH.IO FNF WEBPAGE
                         <a href="https://ninja-muffin24.itch.io/funkin" rel="nofollow noopener">https://ninja-muffin24.itch.io/funkin</a>
                         </strong>
                     </em>
-                    <p class="font" id="funnyWords" style="color: var(--btn_pink)">
+                <p class="font" id="funnyWords" style="color: var(--btn_pink)">
 
-                    </p>
-                    <p class="font">
-                        I'm proud of myself for porting it to html. I learned a bit of so many coding languages for unblocked games because funny
-                    </p>
-                    <p class="font">
-                        Hop on amongus I'll crank mad 90's bro
-                    </p>
-                    <script>
-                        var clicked = false;
-                        function funnysus() {
-                            if (clicked == false) {
-                                document.getElementById("bruh_sus").style.backgroundImage = "url(Images/sus.png)";
-                                pickQuote()
-                                clicked = true;
-                            } else {
-                                document.getElementById("bruh_sus").style.backgroundImage = "";
-                                clicked = false;
-                            }
+                </p>
+                <p class="font">
+                    I'm proud of myself for porting it to html. I learned a bit of so many coding languages for unblocked games because funny
+                </p>
+                <p class="font">
+                    Hop on amongus I'll crank mad 90's bro
+                </p>
+                <script>
+                    var clicked = false;
+
+                    function funnysus() {
+                        if (clicked == false) {
+                            document.getElementById("bruh_sus").style.backgroundImage = "url(Images/sus.png)";
+                            pickQuote()
+                            clicked = true;
+                        } else {
+                            document.getElementById("bruh_sus").style.backgroundImage = "";
+                            clicked = false;
                         }
-                    </script>
-                    <inline class="inline_w_buttons">
-                        <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
+                    }
+                </script>
+                <inline class="inline_w_buttons">
+                    <button id="load-game" class="amongus-funny-btn" style="font-weight: bold;" onclick="funnysus()">
                             Amognus moment
                         </button>
-                        <button id="load-game_beta" class="amongus-funny-btn" style="font-weight: bold;" onclick="loadBeta()">
+                    <button id="load-game_beta" class="amongus-funny-btn" style="font-weight: bold;" onclick="loadBeta()">
                             Load Beta
                         </button>
-                        <p class="font" id="inline_disc" style="display: inline-block; margin: 0; color: rgba(245, 245, 245, 0.637); ">
-                            < loads version with tons of mods but itsn't polished(looks like shit)
+                    <p class="font" id="inline_disc" style="display: inline-block; margin: 0; color: rgba(245, 245, 245, 0.637); ">
+                        < loads version with tons of mods but itsn 't polished(looks like shit)
                         </p>
                     </inline>
                     <p class="font">
@@ -158,8 +162,9 @@
 <!-- 
     Ideas for settings:
         volume warning setting 
+            You cannot change website volume so go with other option.
             Potential ideas
-            1. Simple on/off switch that'll, based on if it's on or off, will send a message to the user before opening the game to turn off volume.        << This is easy, make for demo
+            1. Simple on/off switch that'll, based on if it 's on or off, will send a message to the user before opening the game to turn off volume.        << This is easy, make for demo
                 Use cookies to save the option - make settings page.
             2. Detect if volume is over 0 and if so, send an alert to the user to turn it off.
                 Make settings page - have default game volume setter - volume setter will be used to detect of game volume is above 0(default = 100)        << This is hard, make if number 1 goes well.

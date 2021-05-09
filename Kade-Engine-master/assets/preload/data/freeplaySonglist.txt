@@ -25,3 +25,5 @@ Boxing-Match:matt:7
 Overwrite:xchara:8
 Inkingmistake:ink:8
 Headache:garcello:9
+Nerves:garcellotired:9
+Release:garcellodead:9
