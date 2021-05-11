@@ -664,7 +664,7 @@ class PlayState extends MusicBeatState
 					var posX = -600;
 					var posY = -200;
 
-					defaultCamZoom = 0.9;	
+					defaultCamZoom = 1;	
 					curStage = 'stage';
 					var stage:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('smoke/images/garStage'));
 					stage.antialiasing = true;
@@ -682,7 +682,7 @@ class PlayState extends MusicBeatState
 					var posX = -600;
 					var posY = -200;
 
-					defaultCamZoom = 0.9;	
+					defaultCamZoom = 1;	
 					curStage = 'stage';
 					var stage:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('smoke/images/garStagealt'));
 					stage.antialiasing = true;
@@ -692,13 +692,20 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = true;
 					bg.scrollFactor.set(0.9, 0.9);
 					bg.active = false;
-					var dead:FlxSprite = new FlxSprite(-200, 500).loadGraphic(Paths.image('smoke/images/gardead'));
+					var dead:FlxSprite = new FlxSprite(-100, 500).loadGraphic(Paths.image('smoke/images/gardead'));
 					dead.antialiasing = true;
 					dead.scrollFactor.set(0.9, 0.9);
 					dead.active = false;
+					var smoke:FlxSprite = new FlxSprite(-400, 150);
+					smoke.frames = Paths.getSparrowAtlas('smoke/images/garSmoke');
+					smoke.animation.addByPrefix('idleSmoke', 'smokey', 24);
+					smoke.animation.play('idleSmoke');
+					smoke.scale.set(2, 1);
+					add(bg);
 					add(bg);
 					add(stage);
 					add(dead);
+					add(smoke);
 				}
 			case "foolhardy":
 				{
@@ -709,12 +716,10 @@ class PlayState extends MusicBeatState
 
 					var bg:FlxSprite = new FlxSprite(posX, posY);
 					bg.frames = Paths.getSparrowAtlas('foolhardy/images/Maze');
-					bg.animation.addByPrefix('stage', 'background 2', 24);
-					bg.animation.play('stage');
-					bg.scrollFactor.set(0.8, 0.9);
+					bg.animation.addByPrefix('idleStage', 'Stage', 24);
+					bg.animation.play('idleStage');
 					add(bg);
 				}
-	
 
 			default:
 			{
