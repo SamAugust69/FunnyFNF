@@ -772,7 +772,7 @@ class PlayState extends MusicBeatState
 				dad.y += 300;
 				dad.x += 200;
 			case 'ink':
-				dad.y += 300;
+				dad.y += 200;
 			
 		}
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
