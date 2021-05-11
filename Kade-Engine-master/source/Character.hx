@@ -580,10 +580,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -51);
-				addOffset("singLEFT", -30);
-				addOffset("singDOWN", -30, -40);
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
 				
 				playAnim('idle');
 
@@ -597,10 +597,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Ink Sing Note RIGHT', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -51);
-				addOffset("singLEFT", -30);
-				addOffset("singDOWN", -30, -40);
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
 				
 				playAnim('idle');
 
@@ -615,10 +615,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'garcello Sing Note RIGHT', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -51);
-				addOffset("singLEFT", -30);
-				addOffset("singDOWN", -30, -40);
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
 				
 				playAnim('idle');
 			case 'garcellotired':
@@ -632,11 +632,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('cough', 'garcellotired cough', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -51);
-				addOffset("singLEFT", -30);
-				addOffset("singDOWN", -30, -40);
-				addOffset("cough", -40);
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				addOffset("cough");
 				
 				playAnim('idle');
 				
@@ -651,11 +651,31 @@ class Character extends FlxSprite
 				animation.addByPrefix('tightbars', 'garcello coolguy', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -51);
-				addOffset("singLEFT", -30);
-				addOffset("singDOWN", -30, -40);
-				addOffset("tightbars", -40);
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				addOffset("tightbars");
+
+				playAnim('idle');
+			
+			//fool
+			case 'fool':
+				tex = Paths.getSparrowAtlas('smoke/garcellodead_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'garcello idle dance', 24, false);
+				animation.addByPrefix('singUP', 'garcello Sing Note UP', 24, false);
+				animation.addByPrefix('singDOWN', 'garcello Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'garcello Sing Note LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'garcello Sing Note RIGHT', 24, false);
+				animation.addByPrefix('tightbars', 'garcello coolguy', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				addOffset("tightbars");
 
 				playAnim('idle');
 		}

@@ -677,6 +677,29 @@ class PlayState extends MusicBeatState
 					add(bg);
 					add(stage);
 				}
+			case "release":
+				{
+					var posX = -600;
+					var posY = -200;
+
+					defaultCamZoom = 0.9;	
+					curStage = 'stage';
+					var stage:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('smoke/images/garStagealt'));
+					stage.antialiasing = true;
+					stage.scrollFactor.set(0.9, 0.9);
+					stage.active = false;
+					var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('smoke/images/garStagebgAlt'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					var dead:FlxSprite = new FlxSprite(-200, 500).loadGraphic(Paths.image('smoke/images/gardead'));
+					dead.antialiasing = true;
+					dead.scrollFactor.set(0.9, 0.9);
+					dead.active = false;
+					add(bg);
+					add(stage);
+					add(dead);
+				}
 
 			default:
 			{
