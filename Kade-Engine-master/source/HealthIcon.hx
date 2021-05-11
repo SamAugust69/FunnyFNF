@@ -42,10 +42,10 @@ class HealthIcon extends FlxSprite
 		animation.add('mattmad', [28, 29], 0, false, isPlayer);
 		animation.add('xchara', [25, 24], 0, false, isPlayer);
 		animation.add('ink', [27, 26], 0, false, isPlayer);
-		animation.add('garcello', [27, 26], 0, false, isPlayer);
-		animation.add('garcellotired', [27, 26], 0, false, isPlayer);
-		animation.add('garcellodead', [27, 26], 0, false, isPlayer);
-		animation.add('zardy', [27, 26], 0, false, isPlayer);
+		animation.add('garcello', [32, 33], 0, false, isPlayer);
+		animation.add('garcellotired', [34, 35], 0, false, isPlayer);
+		animation.add('garcellodead', [36, 37], 0, false, isPlayer);
+		animation.add('zardy', [30, 31], 0, false, isPlayer);
 		animation.play(char);
 		switch(char){
 			case 'bf-pixel' | 'senpai' | 'senpai-angry' | 'spirit' | 'gf-pixel':
