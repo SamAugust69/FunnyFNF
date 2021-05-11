@@ -27,3 +27,4 @@ Inkingmistake:ink:8
 Headache:garcello:9
 Nerves:garcellotired:9
 Release:garcellodead:9
+Foolhardy:zardy:10

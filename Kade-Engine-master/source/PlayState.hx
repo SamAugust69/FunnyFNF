@@ -700,6 +700,21 @@ class PlayState extends MusicBeatState
 					add(stage);
 					add(dead);
 				}
+			case "foolhardy":
+				{
+					curStage = 'fool';
+
+					var posX = -600;
+					var posY = -200;
+
+					var bg:FlxSprite = new FlxSprite(posX, posY);
+					bg.frames = Paths.getSparrowAtlas('foolhardy/images/Maze');
+					bg.animation.addByPrefix('stage', 'background 2', 24);
+					bg.animation.play('stage');
+					bg.scrollFactor.set(0.8, 0.9);
+					add(bg);
+				}
+	
 
 			default:
 			{

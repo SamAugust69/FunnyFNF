@@ -659,23 +659,21 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			
-			//fool
-			case 'fool':
-				tex = Paths.getSparrowAtlas('smoke/garcellodead_assets');
+			//foolhardy
+			case 'zardy':
+				tex = Paths.getSparrowAtlas('foolhardy/zardy');
 				frames = tex;
-				animation.addByPrefix('idle', 'garcello idle dance', 24, false);
-				animation.addByPrefix('singUP', 'garcello Sing Note UP', 24, false);
-				animation.addByPrefix('singDOWN', 'garcello Sing Note DOWN', 24, false);
-				animation.addByPrefix('singLEFT', 'garcello Sing Note LEFT', 24, false);
-				animation.addByPrefix('singRIGHT', 'garcello Sing Note RIGHT', 24, false);
-				animation.addByPrefix('tightbars', 'garcello coolguy', 24, false);
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Sing Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Sing Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Sing Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Sing Right', 24, false);
 
 				addOffset('idle');
 				addOffset("singUP");
 				addOffset("singRIGHT");
 				addOffset("singLEFT");
 				addOffset("singDOWN");
-				addOffset("tightbars");
 
 				playAnim('idle');
 		}
