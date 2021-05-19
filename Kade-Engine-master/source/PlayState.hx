@@ -60,6 +60,8 @@ class PlayState extends MusicBeatState
 	public static var goods:Int = 0;
 	public static var sicks:Int = 0;
 
+	public var isXEvent:Bool = false;
+
 	public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
 
@@ -183,9 +185,10 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
-
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
+
+		isXEvent = (SONG.song.toLowerCase() == 'inkingmistake');
 
 		sicks = 0;
 		bads = 0;
@@ -1445,42 +1448,6 @@ class PlayState extends MusicBeatState
 
 			switch (curStage)
 			{
-				//waypoint
-				case 'inkStage' | 'ovStage':
-					babyArrow.frames = Paths.getSparrowAtlas('x-event/images/NOTE_xevent');
-					babyArrow.animation.addByPrefix('green', 'green');
-					babyArrow.animation.addByPrefix('blue', 'blue');
-					babyArrow.animation.addByPrefix('purple', 'purple');
-					babyArrow.animation.addByPrefix('red', 'red');
-
-					babyArrow.antialiasing = true;
-					babyArrow.updateHitbox();
-					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
-
-					switch (Math.abs(i))
-					{
-						case 0:
-							babyArrow.x += Note.swagWidth * 0;
-							babyArrow.animation.addByPrefix('static', 'arrowLEFT');
-							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
-						case 1:
-							babyArrow.x += Note.swagWidth * 1;
-							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
-							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
-						case 2:
-							babyArrow.x += Note.swagWidth * 2;
-							babyArrow.animation.addByPrefix('static', 'arrowUP');
-							babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
-						case 3:
-							babyArrow.x += Note.swagWidth * 3;
-							babyArrow.animation.addByPrefix('static', 'arrowRIGHT');
-							babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
-					}
-
 				case 'school' | 'schoolEvil':
 					babyArrow.loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
 					babyArrow.animation.add('green', [6]);
@@ -1517,7 +1484,11 @@ class PlayState extends MusicBeatState
 					}
 
 				default:
-					babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
+					if (isXEvent) {
+						babyArrow.frames = Paths.getSparrowAtlas('x-event/images/NOTE_assets');
+					} else {
+						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
+					}
 					babyArrow.animation.addByPrefix('green', 'arrowUP');
 					babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 					babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
