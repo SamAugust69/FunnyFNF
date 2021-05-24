@@ -39,9 +39,11 @@ class MainMenuState extends MusicBeatState
 	public static var nightly:String = "";
 
 	public static var kadeEngineVer:String = "1.4.1" + nightly;
+	public var fartAmount:String = "0";
 	public static var gameVer:String = "0.2.7.1";
 
 	var magenta:FlxSprite;
+	var brown:FlxSprite;
 	var camFollow:FlxObject;
 
 	override function create()
@@ -80,6 +82,17 @@ class MainMenuState extends MusicBeatState
 		magenta.antialiasing = true;
 		magenta.color = 0xFFfd719b;
 		add(magenta);
+
+		brown = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
+		brown.scrollFactor.x = 0;
+		brown.scrollFactor.y = 0.18;
+		brown.setGraphicSize(Std.int(magenta.width * 1.1));
+		brown.updateHitbox();
+		brown.screenCenter();
+		brown.visible = false;
+		brown.antialiasing = true;
+		brown.color = 0x1459319;
+		add(brown);
 		// magenta.scrollFactor.set();
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
@@ -107,6 +120,10 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+		var test:FlxText = new FlxText(5, FlxG.height - 32, 0, ("You Farted " + fartAmount + " Times"), 12);
+		test.scrollFactor.set();
+		test.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(test);
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -153,11 +170,13 @@ class MainMenuState extends MusicBeatState
 			{
 				if (optionShit[curSelected] == 'donate')
 				{
-					#if linux
-					Sys.command('/usr/bin/xdg-open', ["https://ninja-muffin24.itch.io/funkin", "&"]);
-					#else
-					FlxG.openURL('https://ninja-muffin24.itch.io/funkin');
-					#end
+					FlxG.sound.play(Paths.sound('oopsfarted'));
+					FlxFlicker.flicker(brown, 1.1, 0.15, false);
+					FlxG.save.data.farted = FlxG.save.data.farted + 1;
+					fartAmount = FlxG.save.data.farted;
+					trace("farted");
+					trace(FlxG.save.data.farted);
+					trace(fartAmount);
 				}
 				else
 				{
