@@ -86,7 +86,11 @@ class Note extends FlxSprite
 				updateHitbox();
 
 			default:
-				frames = Paths.getSparrowAtlas('NOTE_assets');
+				if (PlayState.SONG.song.toLowerCase() == "inkingmistake") {
+					frames = Paths.getSparrowAtlas('x-event/images/NOTE_assets');
+				} else {
+					frames = Paths.getSparrowAtlas('NOTE_assets');
+				}
 
 				animation.addByPrefix('greenScroll', 'green0');
 				animation.addByPrefix('redScroll', 'red0');
