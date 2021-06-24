@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Download - Google Drive</title>
-        <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
-        <link href="download.css" rel="stylesheet">
-    </head>
-    <body id="bruh_sus"style="background-color: black; margin: 0;">
-        <div class="main_container"style="min-height: 100%; max-width: 960px; margin: auto;">
-            <div class="drop_files">
-                <p>
-                    <p class="header-font">
-                        Downloading Process
-                    </p>
-                    <p class="font">
-                        Download Forge 1.12.2 CLIENT
-                        <a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html">http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html</a>
-                        <p class="font">
-                            Press the windows key and search %appdata% and open. Open the .minecraft folder and drag and drop
-                            <a class="special-link" href="https://github.com/SamAugust69/FunnyFNF/raw/master/mods.zip" download="mods.zip">THIS FOLDER</a>
-                            there.
-                        </p>
-                        <p class="header-font">
-                            Server Info
-                        </p>
-                        <p class="font">
-                            IP: 73.4.188.149:25566
-                        </p>    
-                        <p class="font">
-                            Server Version: Forge 1.12.2
-                        </p>    
-                    </p>
-                </p>
+
+<head>
+    <title>Download - Google Drive</title>
+    <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
+    <link href="download2.css" rel="stylesheet">
+</head>
+<script src="downloadBtn.js"></script>
+
+<body style="background-color: black;">
+    <div class="main_container">
+        <div class="main_page_sel_container">
+            <div class="page_sel_button_holder">
+                <button class="page_sel_button-selected" style="margin-left: 5px;" id="enigmatica_btn" onclick="EngClick()">
+                    Enigmatica 2 - Expert
+                </button>
+                <button class="page_sel_button" id="100x100_btn" onclick="van100Click()">
+                    Vanilla 100 x 100
+                </button>
             </div>
-            <div class="download_main_container">
-                <div style="margin-left: 10px;">
-                    <p class="var-font">
-                        Download v1
+            <div class="page_container" id="eng_page" style="display: block;">
+                <p class="header">
+                    Download Process:
+                </p>
+                <p class="normal">
+                    uhhh
+                </p>
+                <a href="javascript:void(0);" onclick="engDropdown()" class="eng_dropdown_btn">
+                    gaming
+                </a>
+                <div class="eng_dropdown_frame-open" id="eng_dropdown">
+                    <p style="margin-top: 6px;">
+                        tes
                     </p>
                 </div>
             </div>
+            <div class="page_container" id="100x100_page" style="display: none;">
+                <p class="header">
+                    Coming Soon
+                </p>
+            </div>
         </div>
-    </body>
+        <div class="download_main_container">
+            <div style="margin-left: 10px;">
+                <p class="download-font">
+                    Download v2
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Download - Google Drive</title>
+    <link rel="icon" href="//ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
+    <link href="download.css" rel="stylesheet">
+</head>
+
+<body id="bruh_sus" style="background-color: black; margin: 0;">
+    <div class="main_container" style="min-height: 100%; max-width: 960px; margin: auto;">
+        <div class="drop_files">
+            <p>
+                <p class="header-font">
+                    Downloading Process
+                </p>
+                <p class="font">
+                    Download Forge 1.12.2 CLIENT
+                    <a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html">http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html</a>
+                    <p class="font">
+                        Press the windows key and search %appdata% and open. Open the .minecraft folder and drag and drop
+                        <a class="special-link" href="https://github.com/SamAugust69/FunnyFNF/raw/master/mods.zip" download="mods.zip">THIS FOLDER</a> there.
+                    </p>
+                    <p class="header-font">
+                        Server Info
+                    </p>
+                    <p class="font">
+                        IP: 73.4.188.149:25566
+                    </p>
+                    <p class="font">
+                        Server Version: Forge 1.12.2
+                    </p>
+                </p>
+            </p>
+        </div>
+        <div class="download_main_container">
+            <div style="margin-left: 10px;">
+                <p class="var-font">
+                    Download v1
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> -->
