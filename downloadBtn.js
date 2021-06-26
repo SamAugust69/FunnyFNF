@@ -30,10 +30,12 @@ function engDropdown() {
     var dropdown = document.getElementById("eng_dropdown")
 
     if (engDropdownOpen == true) {
+        dropdown.style.marginBottom = "0px";
         dropdown.style.height = "0px";
         engDropdownOpen = false;
     } else {
         dropdown.style.height = "auto";
+        dropdown.style.marginBottom = "16px";
         engDropdownOpen = true;
     }
 }

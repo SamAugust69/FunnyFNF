@@ -118,12 +118,13 @@ p.normal {
     transition-property: height;
     transition-duration: 1s;
     height: auto;
-    text-overflow: "";
+    overflow-y: hidden;
     margin: auto;
     margin-top: 6px;
-    width: 900px;
+    max-width: 900px;
     background-color: var(--dropdown-color);
     display: block;
+    margin-bottom: 16px;
 }
 
 .eng_dropdown_frame {
