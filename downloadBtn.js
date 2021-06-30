@@ -24,18 +24,18 @@ function van100Click() {
     van100Btn.className = "page_sel_button-selected";
 }
 
-var engDropdownOpen = true
+var engDropdownOpen = false
 
 function engDropdown() {
-    var dropdown = document.getElementById("eng_dropdown")
+    var dropdown = document.getElementsByClassName("eng_dropdown_frame-open")
 
     if (engDropdownOpen == true) {
-        dropdown.style.marginBottom = "0px";
-        dropdown.style.height = "0px";
+        dropdown[0].style.marginBottom = "0px";
+        dropdown[0].style.height = "0px"
         engDropdownOpen = false;
     } else {
-        dropdown.style.height = "auto";
-        dropdown.style.marginBottom = "16px";
+        dropdown[0].style.height = "68px";
+        dropdown[0].style.marginBottom = "16px";
         engDropdownOpen = true;
     }
 }
